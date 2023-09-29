@@ -1,0 +1,124 @@
+.friend-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    padding: 0.5rem;
+    border: none;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23333333' d='M22.6 5.8c-.4-.4-1-.4-1.4 0l-9.2 9.2c-.4.4-1 .4-1.4 0l-9.2-9.2c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4L11 17.6c.2.2.4.3.7.3s.5-.1.7-.3l9.2-9.2c.4-.4.4-1 0-1.4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1rem auto;
+    cursor: pointer;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+.memory-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.memory-group input[type="text"] {
+    margin-right: 0.5rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-add {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-add:hover {
+    background-color: #3e8e41;
+}
+
+.btn-remove {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-remove:hover {
+    background-color: #c62828;
+}
+
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.image-preview {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .preview-image {
+    max-width: 100px; 
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  .image-preview button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+
+.btn-submit:hover {
+    background-color: #3e8e41;
+}

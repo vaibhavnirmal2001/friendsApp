@@ -1,0 +1,36 @@
+<div>
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+        <label>
+            Name:
+            <input type="text" formControlName="name" [disabled]="true">
+            <span *ngIf="myForm.controls.name.touched && myForm.controls.name.errors?.required">Name is required.</span>
+        </label>
+
+        <label>
+            Category:
+            <select formControlName="category">
+                <option value="">Select a category</option>
+                <option *ngFor="let category of expenseCategories" [value]="category">{{ category }}</option>
+            </select>
+            <span *ngIf="myForm.controls.category.touched && myForm.controls.category.errors?.required">
+                Category is required.
+            </span>
+        </label>
+
+
+        <label>
+            Amount:
+            <input type="text" formControlName="amount">
+            <span *ngIf="myForm.controls.amount.touched && myForm.controls.amount.errors?.required">Amount is
+                required.</span>
+            <span *ngIf="myForm.controls.amount.touched && myForm.controls.amount.errors?.pattern">Amount must be a
+                number.</span>
+        </label>
+        <div>
+            <button type="submit" [disabled]="!myForm.valid">Submit</button>
+        
+            <button class="close-button" (click)="closeDilogue()">Close</button>
+        </div>
+    </form>
+
+</div>

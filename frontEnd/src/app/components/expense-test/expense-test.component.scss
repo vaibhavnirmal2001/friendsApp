@@ -1,0 +1,68 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+  }
+  
+  span {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  .expense-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.expense-table th,
+.expense-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.expense-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #666;
+}
+
+.expense-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.expense-table tr:hover {
+    background-color: #f5f5f5;
+}

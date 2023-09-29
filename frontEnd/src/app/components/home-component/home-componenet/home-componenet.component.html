@@ -1,0 +1,65 @@
+<form [formGroup]="friendForm" (ngSubmit)="onSubmit()" class="friend-form">
+    <h2>Add New Friend</h2>
+
+    <div class="form-group">
+        <label for="friendName">Friend Name:</label>
+        <input type="text" id="friendName" formControlName="friendName" placeholder="Enter friend name">
+    </div>
+
+    <div class="form-group">
+        <label for="dOB">Date of Birth:</label>
+        <input type="date" id="dOB" formControlName="dOB">
+    </div>
+
+    <div class="form-group">
+        <label for="picture">Picture:</label>
+        <input type="file" id="picture" formControlName="picture" (change)="onPictureChange($event)">
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="bio">Bio:</label>
+        <textarea id="bio" formControlName="bio" placeholder="Tell us about your friend"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="typeOfRelation">Type of Relation:</label>
+        <select id="typeOfRelation" formControlName="typeOfRelation">
+            <option *ngFor="let relationshipType of friendRelationshipTypes" [value]="relationshipType">
+                {{ relationshipType }}
+            </option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="memories">Memories:</label>
+        <div formArrayName="memories">
+            <div *ngFor="let memory of memories.controls; let i = index" class="memory-item">
+                <textarea [formControlName]="i" placeholder="Note down your memories here.."></textarea>
+                <button type="button" (click)="removeMemory(i)">Remove</button>
+            </div>
+            <button type="button" (click)="addMemory()">Add Memory</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="images">Images:</label>
+        <input type="file" id="images" formControlName="images" (change)="onImagesChange($event)" multiple>
+        <div class="image-preview" *ngFor="let image of imagePreviews">
+            <img [src]="image" alt="Image Preview" class="preview-image">
+            <button type="button" (click)="removeImage(image)">Remove</button>
+        </div>
+        
+    </div>
+
+
+
+
+    <div class="button-container">
+        <button type="submit" class="btn-submit">Submit</button>
+    </div>
+
+</form>
+
+<button (click)="closeDilogue()" class="btn-submit">Close</button>

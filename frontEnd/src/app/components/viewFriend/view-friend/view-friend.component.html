@@ -1,0 +1,35 @@
+<div class="profile-container">
+    <div class="profile-picture">
+      <img [src]="friend.picture" alt="Profile Picture">
+    </div>
+    <div class="profile-info">
+      <h2 class="profile-name">{{ friend.friendName }}</h2>
+      <p class="profile-bio">{{ friend.bio }}</p>
+      <div class="profile-details">
+        <div class="detail-item">
+          <span class="detail-label">Date of Birth:</span>
+          <span class="detail-value">{{ friend.dOB }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Type of Relation:</span>
+          <span class="detail-value">{{ friend.typeOfRelation }}</span>
+        </div>
+      </div>
+      <h3 class="memories-heading">Memories:</h3>
+      <ul class="memories-list">
+        <li *ngFor="let memory of friend.memories" class="memory-item">{{ memory }}</li>
+      </ul>
+      <div class="button-group">
+        <button class="btn-close" (click)="closeDilogue()">Close</button>
+        <button class="btn-edit" (click)="openEditFriendDialog(friend)">Edit</button>
+        <button class="btn-remove" (click)="openRemoveFriendDialog(friend)">Remove Friend</button>
+      </div>
+      <div class="image-grid">
+        <div class="image-item" *ngFor="let image of friend.images">
+          <img [src]="image" alt="Image" class="grid-image">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  

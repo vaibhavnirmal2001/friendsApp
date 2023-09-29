@@ -1,0 +1,9 @@
+
+export enum ExpenseEnum {
+    ENTERTAINMENT = 'ENTERTAINMENT',
+    GROCERIES = 'GROCERIES',
+    RESTAURANT = 'RESTAURANT',
+    UTILITIES = 'UTILITIES',
+    MISC = 'MISC'
+  }
+  

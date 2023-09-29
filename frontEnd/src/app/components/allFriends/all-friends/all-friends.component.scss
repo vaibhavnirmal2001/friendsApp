@@ -1,0 +1,121 @@
+body {
+  background-color: #1f1f1f;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.add-friend-button {
+  background-color: #292929;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.heading {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #292929;
+  color: #fff;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 8px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.name {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.view-button {
+  background-color: #292929;
+  color: #fff;
+  /* border: none; */
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  margin-left: -110px;
+  width: 100%;
+  // border: 1px solid #007bff;
+  border: none;
+}
+
+.name-div{
+  margin-bottom:23px;
+}
+.view-button:hover {
+  background-color: #4a4dff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+.view-button:focus {
+  outline: none;
+}
+
+.card img {
+  width: 200px;
+    height: 175px;
+    object-fit: cover;
+
+}
+
+@keyframes neon {
+  0% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4a4dff, 0 0 30px #4a4dff, 0 0 40px #4a4dff, 0 0 50px #4a4dff, 0 0 60px #4a4dff;
+  }
+  100% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4a4dff, 0 0 30px #4a4dff, 0 0 40px #4a4dff, 0 0 50px #4a4dff, 0 0 60px #4a4dff, 0 0 70px #4a4dff;
+  }
+}

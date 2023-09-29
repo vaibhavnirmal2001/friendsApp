@@ -1,0 +1,60 @@
+<div>
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+        <label>
+            Name:
+            <input type="text" formControlName="name">
+            <span *ngIf="myForm.controls.name.touched && myForm.controls.name.errors?.required">Name is required.</span>
+        </label>
+
+        <label>
+            Category:
+            <select formControlName="category">
+                <option value="">Select a category</option>
+                <option *ngFor="let category of expenseCategories" [value]="category">{{ category }}</option>
+            </select>
+            <span *ngIf="myForm.controls.category.touched && myForm.controls.category.errors?.required">
+                Category is required.
+            </span>
+        </label>
+        
+
+        <label>
+            Amount:
+            <input type="text" formControlName="amount">
+            <span *ngIf="myForm.controls.amount.touched && myForm.controls.amount.errors?.required">Amount is
+                required.</span>
+            <span *ngIf="myForm.controls.amount.touched && myForm.controls.amount.errors?.pattern">Amount must be a
+                number.</span>
+        </label>
+
+        <button type="submit" [disabled]="!myForm.valid">Submit</button>
+    </form>
+
+</div>
+
+<div>
+    <table class="expense-table">
+        <thead>
+            <tr>
+                <th>Expense Name</th>
+                <th>Expense Category</th>
+                <th>Expense Amount</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let expense of allExpenses">
+                <td>{{expense.expenseName}}</td>
+                <td>{{expense.expenseCategory}}</td>
+                <td>{{expense.expenseAmount}}</td>
+                <td>
+                    <button (click)="editExpense(expense)">Edit</button>
+                </td>
+                <td>
+                    <button (click)="deleteExpense(expense)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,17 @@
+<button class="add-friend-button" (click)="addFriend()">
+  Add New Friend</button>
+
+<h1 class="heading">My Friends</h1>
+<div class="container">
+  <div class="card" *ngFor="let friend of allFriends">
+    <img [src]="friend.picture" alt="Friend 3" class="friend-picture">
+    <div class="name-div">
+      <p class="name">{{friend.friendName}}</p>
+
+    </div>
+    <div class="view-div">
+      <button class="view-button neon-effect" (click)="viewFriend(friend)"> View </button>
+
+    </div>
+  </div>
+</div>
