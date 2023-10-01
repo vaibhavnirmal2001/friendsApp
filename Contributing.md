@@ -20,7 +20,7 @@ Thank you for considering contributing to Friend's App. Your contributions are v
 
 Contributions to Friend's App can be code enhancements, bug fixes, documentation improvements, or any other valuable contributions. This guide will walk you through the contribution process.
 
-## Getting Started
+## Getting Started:
 
 ### Fork the Repository
 
@@ -44,7 +44,7 @@ Create a new branch for your contribution:
 4. Use a descriptive branch name that indicates the purpose of your changes.
 Make Changes
 Make your desired changes to the codebase.
-Commit Changes
+Commit your Changes
 Commit your changes with a clear and concise commit message:
 
     ```bash
