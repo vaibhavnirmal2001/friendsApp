@@ -1,6 +1,7 @@
 # Friend's App
 
 
+
 Welcome to the Friend's App repository! This social media platform offers unique features not available on other platforms, and we invite you to contribute to its growth.
 
 ## Table of Contents
@@ -20,7 +21,7 @@ Welcome to the Friend's App repository! This social media platform offers unique
 
 Friend's App is a social media platform aimed at connecting people and fostering meaningful interactions. We believe in the power of open-source collaboration to make the app even better.
 
-## Getting Started
+## Getting Started:
 
 ### Prerequisites
 
