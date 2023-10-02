@@ -32,6 +32,7 @@ Contributions to Friend's App can be code enhancements, bug fixes, documentation
 
    ```bash
    git clone https://github.com/your-username/friends-app.git
+   
    cd friends-app
    
 3. Create a New Branch
