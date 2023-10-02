@@ -53,8 +53,9 @@ Commit your changes with a clear and concise commit message:
 Push Changes
 Push your changes to your forked repository:
 
-  ```bash
-      git push origin feature/your-feature
+  ```
+git push origin feature/your-feature 
+  ```
 
 
 - Create a Pull Request
