@@ -23,6 +23,12 @@ Friend's App is a social media platform aimed at connecting people and fostering
 
 ## Getting Started:
 
+- **Star** this repository if you find it useful!
+
+- **Fork** this repository if you want to contribute!
+
+- **Pull requests** are welcome. Please follow our **CONTRIBUTING.md**
+
 ### Prerequisites
 
 Before you start contributing, please ensure you have the following prerequisites:
